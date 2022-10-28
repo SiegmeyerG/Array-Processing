@@ -1,4 +1,7 @@
-% minvar
+% This is the method to implement minimum variance estimate
+%Parameter x: sampled signal vector 
+%Parameter n: the fft point length
+%Return P_mv: the estimated spectrum
 function P_mv = minvar(x,n)
 R = x*x';
 [v,d]=eig(R);

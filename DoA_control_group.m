@@ -1,9 +1,10 @@
+%This file uses the functions from MATLAB libraray to calculate DoA
+%using phased functions
 clear
 %% spcom_10sep
 figure(1);
 load('spcom_10sep.mat')
 array0 = phased.ULA('NumElements',M,'ElementSpacing',Delta);
-% num_sources = num_sources+1;
 % Classical Beamformer
 spatialspectrum00 = phased.BeamscanEstimator('SensorArray',array0,'ScanAngles',-90:0.01:90,'DOAOutputPort',true,'NumSignals',num_sources);
 [~,ang00] = spatialspectrum00(X');

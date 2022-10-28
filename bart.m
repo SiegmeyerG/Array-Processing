@@ -1,5 +1,8 @@
 % Periodogram averaging, also known as Bartlett's method
-% rectangular, Bartlett, Hamming, and Blackman windows
+% Parameter signal: the sampled signal vector
+% Parameter K :  the number of segments for Bartlett 
+% Parameter n :  the number of FFT length
+% Return P_bart: the estimated power sepctral
 function P_bart=bart(signal,K,n)
 P_bart = 0;
 ind = 1;
